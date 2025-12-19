@@ -64,13 +64,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-black text-white">
       <div className="aurora-veil" aria-hidden />
-      <div
-        className="glow-grid"
-        aria-hidden
-        style={{
-          backgroundSize: "140px 140px, 140px 140px",
-        }}
-      />
+      <div className="glow-grid" aria-hidden />
       <div className="pointer-events-none absolute inset-x-0 top-28 flex justify-center blur-[110px]">
         <div className="h-56 w-96 rounded-full bg-[linear-gradient(120deg,rgba(255,255,255,0.15),rgba(255,255,255,0.04),rgba(255,255,255,0.18))] animate-gradient" />
       </div>
