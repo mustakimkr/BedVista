@@ -62,8 +62,20 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="mx-auto flex min-h-screen max-w-5xl flex-col px-6 py-12 sm:py-16">
+    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+      <div className="aurora-veil" aria-hidden />
+      <div
+        className="glow-grid"
+        aria-hidden
+        style={{
+          backgroundSize: "140px 140px, 140px 140px",
+        }}
+      />
+      <div className="pointer-events-none absolute inset-x-0 top-28 flex justify-center blur-[110px]">
+        <div className="h-56 w-96 rounded-full bg-[linear-gradient(120deg,rgba(255,255,255,0.15),rgba(255,255,255,0.04),rgba(255,255,255,0.18))] animate-gradient" />
+      </div>
+
+      <div className="relative mx-auto flex min-h-screen max-w-5xl flex-col px-6 py-12 sm:py-16">
         <header className="flex items-center justify-between">
           <div className="text-lg font-semibold tracking-tight">BedVista</div>
           <div className="text-sm text-zinc-500">bedvista.com</div>
@@ -86,14 +98,20 @@ export default function Home() {
             </div>
 
             <div className="grid gap-3 text-sm text-zinc-400 sm:grid-cols-2">
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4">
+                <div className="pointer-events-none absolute inset-0 opacity-50">
+                  <div className="h-full w-full bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.18),transparent_45%),radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.08),transparent_45%)] animate-slow-pulse" />
+                </div>
                 <p className="font-semibold text-white">We read every note</p>
                 <p className="mt-1 text-zinc-400">
                   Your words aren&apos;t disappearing into a void. They help us
                   decide what to build.
                 </p>
               </div>
-              <div className="rounded-xl border border-white/10 bg-white/5 p-4">
+              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-4">
+                <div className="pointer-events-none absolute inset-0 opacity-50">
+                  <div className="h-full w-full bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.18),transparent_50%),radial-gradient(circle_at_20%_0%,rgba(255,255,255,0.08),transparent_45%)] animate-slow-pulse" />
+                </div>
                 <p className="font-semibold text-white">Minimal + private</p>
                 <p className="mt-1 text-zinc-400">
                   Just a single message box. No trackers, no fluff — black and
@@ -103,11 +121,15 @@ export default function Home() {
             </div>
           </section>
 
-          <section>
+          <section className="relative">
             <form
-              className="space-y-6 rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur"
+              className="relative space-y-6 overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 shadow-[0_20px_80px_rgba(0,0,0,0.35)] backdrop-blur"
               onSubmit={handleSubmit}
             >
+              <div className="pointer-events-none absolute inset-0">
+                <div className="absolute inset-[-1px] bg-[linear-gradient(120deg,rgba(255,255,255,0.16),rgba(255,255,255,0.04),rgba(255,255,255,0.16))] opacity-60 animate-gradient" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.16),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(255,255,255,0.12),transparent_50%)] blur-2xl opacity-70 animate-slow-pulse" />
+              </div>
               <div className="space-y-2">
                 <Label htmlFor="reason">What brought you here?</Label>
                 <Textarea

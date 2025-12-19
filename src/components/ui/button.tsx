@@ -12,7 +12,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "default", type = "button", ...props }, ref) => {
     const styles: Record<ButtonVariant, string> = {
       default:
-        "bg-white text-black hover:bg-zinc-100 active:bg-zinc-200 focus-visible:ring-white focus-visible:ring-offset-black",
+        "bg-[linear-gradient(120deg,#ffffff,#dcdcdc,#ffffff)] text-black hover:brightness-110 active:brightness-95 focus-visible:ring-white focus-visible:ring-offset-black animate-gradient",
       ghost:
         "border border-white/20 bg-transparent text-white hover:border-white/40 hover:bg-white/5 focus-visible:ring-white/70 focus-visible:ring-offset-black",
     };
